@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { provideStore } from '@ngrx/store';
-
+import { clock } from './reducers/reducers';
 
 @NgModule({
   declarations: [
@@ -20,6 +20,6 @@ import { provideStore } from '@ngrx/store';
     HttpModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, provideStore({clock})]
 })
 export class AppModule { }
