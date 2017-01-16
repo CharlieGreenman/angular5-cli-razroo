@@ -6,6 +6,9 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
+import { provideStore } from '@ngrx/store';
+
+
 @NgModule({
   declarations: [
     AppComponent,
