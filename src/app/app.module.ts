@@ -6,7 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 
-import { provideStore } from '@ngrx/store';
+import { StoreModule } from '@ngrx/store';
 import { clock } from './reducers/reducers';
 
 @NgModule({
@@ -17,9 +17,10 @@ import { clock } from './reducers/reducers';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    StoreModule.provideStore({clock})
   ],
   providers: [],
-  bootstrap: [AppComponent, provideStore({clock})]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
