@@ -1,18 +1,15 @@
 export const SECOND = 'SECOND';
 export const HOUR = 'HOUR';
 
-export const clock = (state = new Date(), {type}) => {
+export const clock = (state = new Date(), {type, payload}) => {
     const date = new Date(state.getTime())
     switch (type) {
         case SECOND:
-            date.setSeconds(date.getSeconds() + 1)
+            date.setSeconds(date.getSeconds() + payload)
             return date
-
         case HOUR:
-            date.setHours(date.getHours() + 1)
+            date.setHours(date.getHours() + payload)
             return date
-
-
         default:
             return state
     }
