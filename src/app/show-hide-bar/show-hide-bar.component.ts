@@ -13,11 +13,7 @@ export class ShowHideBarComponent implements OnInit {
     console.log('hide button clicked on');
   }
   constructor() {
-
   }
-
   ngOnInit() {
-
   }
-
 }
