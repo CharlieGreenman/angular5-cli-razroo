@@ -8,11 +8,13 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { StoreModule } from '@ngrx/store';
 import { clock } from './reducers/reducers';
+import { ShowHideBarComponent } from './show-hide-bar/show-hide-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent
+    NavBarComponent,
+    ShowHideBarComponent
   ],
   imports: [
     BrowserModule,
