@@ -23,11 +23,11 @@ export class NavBarComponent{
       this.clock = store.select('clock')
 
       Observable.merge(
-          this.click$.mapTo({type: HOUR, payload: 1),
-          Observable.interval(1000).mapTo(type: SECOND, payload: 1)
+          this.click$.mapTo({type: HOUR, payload: 1}),
+          Observable.interval(1000).mapTo({type: SECOND, payload: 1})
       )
           .subscribe((action)=>{
-              store.dispatch({action})
+              store.dispatch(action)
           })
   }
 
