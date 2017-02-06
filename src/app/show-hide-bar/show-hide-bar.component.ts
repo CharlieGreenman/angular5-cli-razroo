@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 
 @Component({
   selector: 'app-show-hide-bar',
@@ -6,14 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-hide-bar.component.scss']
 })
 export class ShowHideBarComponent implements OnInit {
-  show() {
-    console.log('show button clicked on');
-  };
-  hide() {
-    console.log('hide button clicked on');
+
+  constructor(store: Store<any>) {
+    show() {
+      store.dispatch('SHOW');
+      console.log('show button clicked on');
+    }
+    hide() {
+      this.dispatch('HIDE');
+      console.log('hide button clicked on');
+    }
   }
-  constructor() {
-  }
+
+
   ngOnInit() {
   }
 }
