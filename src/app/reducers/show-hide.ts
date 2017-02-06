@@ -14,4 +14,4 @@ export const environment = (state = initialState, action) => {
     default:
       return state;
   }
-}
+};

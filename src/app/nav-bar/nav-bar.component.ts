@@ -20,7 +20,7 @@ export class NavBarComponent{
   clock;
 
   constructor(store: Store<any>) {
-      this.clock = store.select('clock')
+      this.clock = store.select('clock');
 
       Observable.merge(
           this.click$.mapTo({type: HOUR, payload: 1}),
