@@ -6,20 +6,18 @@ import { Store } from '@ngrx/store';
   templateUrl: './show-hide-bar.component.html',
   styleUrls: ['./show-hide-bar.component.scss']
 })
-export class ShowHideBarComponent implements OnInit {
+export class ShowHideBarComponent{
 
   constructor(store: Store<any>) {
-    show() {
-      store.dispatch('SHOW');
-      console.log('show button clicked on');
-    }
-    hide() {
-      this.dispatch('HIDE');
-      console.log('hide button clicked on');
-    }
   }
 
-
-  ngOnInit() {
+  show() {
+    this.store.dispatch('SHOW');
+    console.log('show button clicked on');
   }
+  hide() {
+    this.store.dispatch('HIDE');
+    console.log('hide button clicked on');
+  }
+
 }
