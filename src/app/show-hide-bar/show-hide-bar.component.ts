@@ -8,15 +8,15 @@ import { Store } from '@ngrx/store';
 })
 export class ShowHideBarComponent{
 
-  constructor(store: Store<any>) {
+  constructor(private store: Store<any>) {
   }
 
   show() {
-    this.store.dispatch('SHOW');
+    this.store.dispatch({view: 'SHOW'});
     console.log('show button clicked on');
   }
   hide() {
-    this.store.dispatch('HIDE');
+    this.store.dispatch({view: 'HIDE'});
     console.log('hide button clicked on');
   }
 
