@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { showBlock, hideBlock} from '../actions/show-hide';
 
 @Component({
   selector: 'app-show-hide-bar',
@@ -12,11 +13,11 @@ export class ShowHideBarComponent{
   }
 
   show() {
-    this.store.dispatch({view: 'SHOW'});
+    this.store.dispatch(showBlock('true'));
     console.log('show button clicked on');
   }
   hide() {
-    this.store.dispatch({view: 'HIDE'});
+    this.store.dispatch(hideBlock('hide'));
     console.log('hide button clicked on');
   }
 

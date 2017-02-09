@@ -1,6 +1,7 @@
 import * as types from "../constants/ActionTypes";
 
 export function showBlock(show) {
+  console.log('show function clicked');
     return {
         type: types.SHOW,
         show: true
