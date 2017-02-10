@@ -1,16 +1,15 @@
 import * as types from "../constants/ActionTypes";
 
-export function showBlock(show) {
-  console.log('show function clicked');
+export function showBlock() {
     return {
         type: types.SHOW,
-        show: true
+        show: 'show'
     };
 }
 
-export function hideBlock(hide) {
+export function hideBlock() {
     return {
         type: types.HIDE,
-        show: false
+        show: 'hide'
     };
 }

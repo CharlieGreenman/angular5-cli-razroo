@@ -8,17 +8,15 @@ import { showBlock, hideBlock} from '../actions/show-hide';
   styleUrls: ['./show-hide-bar.component.scss']
 })
 export class ShowHideBarComponent{
-
+  environment;
   constructor(private store: Store<any>) {
+    this.environment = store.select('environment');
   }
-
   show() {
-    this.store.dispatch(showBlock('true'));
-    console.log('show button clicked on');
+    this.store.dispatch(showBlock());
   }
   hide() {
-    this.store.dispatch(hideBlock('hide'));
-    console.log('hide button clicked on');
+    this.store.dispatch(hideBlock());
   }
 
 }
