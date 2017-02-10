@@ -1,7 +1,7 @@
 import * as types from "../constants/ActionTypes";
 
 const initialState = {
-  show: 'show'
+  show: types.SHOW
 };
 
 export const environment = (state = initialState, action) => {

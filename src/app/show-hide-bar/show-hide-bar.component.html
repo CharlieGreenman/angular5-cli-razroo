@@ -1,7 +1,8 @@
 <p>
   <button (click)="show()" class="button">Show</button>
   <button (click)="hide()" class="button">Hide</button>
-  {{environment}}
 </p>
+
+<p> environment: {{environment | async | json}} </p>
 
 <div class="color-bar"></div>
