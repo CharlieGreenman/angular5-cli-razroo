@@ -9,6 +9,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { StoreModule } from '@ngrx/store';
 import { clock } from './reducers/reducers';
 import { ShowHideBarComponent } from './show-hide-bar/show-hide-bar.component';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,10 @@ import { ShowHideBarComponent } from './show-hide-bar/show-hide-bar.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    StoreModule.provideStore({clock})
+    StoreModule.provideStore({clock}),
+    StoreDevtoolsModule.instrumentOnlyWithExtension({
+      maxAge: 5
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
