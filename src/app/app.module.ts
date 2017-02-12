@@ -4,10 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { StoreModule } from '@ngrx/store';
-import { clock } from './reducers/reducers';
 import { environment } from './reducers/show-hide';
 import { ShowHideBarComponent } from './show-hide-bar/show-hide-bar.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -15,14 +13,13 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
     ShowHideBarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    StoreModule.provideStore({clock, environment}),
+    StoreModule.provideStore({environment}),
     StoreDevtoolsModule.instrumentOnlyWithExtension({
       maxAge: 5
     })
