@@ -1,8 +1,8 @@
 <p>
-  <button (click)="$show.next()" class="button">Show</button>
-  <button (click)="$hide.next()" class="button">Hide</button>
+  <button (click)="show$.next()" class="button">Show</button>
+  <button (click)="hide$.next()" class="button">Hide</button>
 </p>
 
-<p> environment: {{environment | async | json}} </p>
+<p> environment: {{(environment | async).show}} </p>
 
-<div class="color-bar"></div>
+<div *ngIf = "(environment | async).show" class="color-bar"></div>

@@ -3,13 +3,13 @@ import * as types from "../constants/ActionTypes";
 export function showBlock() {
     return {
         type: types.SHOW,
-        show: "show"
+        show: true
     };
 }
 
 export function hideBlock() {
     return {
         type: types.HIDE,
-        show: "hide"
+        show: false
     };
 }
