@@ -8,6 +8,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { StoreModule } from '@ngrx/store';
 import { clock } from './reducers/reducers';
+import { environment } from './reducers/show-hide';
 import { ShowHideBarComponent } from './show-hide-bar/show-hide-bar.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
@@ -21,7 +22,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserModule,
     FormsModule,
     HttpModule,
-    StoreModule.provideStore({clock}),
+    StoreModule.provideStore({clock, environment}),
     StoreDevtoolsModule.instrumentOnlyWithExtension({
       maxAge: 5
     })
