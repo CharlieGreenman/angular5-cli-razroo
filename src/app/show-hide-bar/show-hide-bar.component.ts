@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/mapTo';
+import { Subject } from 'rxjs/Subject';
 import { Store } from '@ngrx/store';
 import { showBlock, hideBlock} from '../actions/show-hide';
 
@@ -8,15 +11,19 @@ import { showBlock, hideBlock} from '../actions/show-hide';
   styleUrls: ['./show-hide-bar.component.scss']
 })
 export class ShowHideBarComponent{
+  show$ = new Subject();
+  hide$ = new Subject();
   environment;
-  constructor(private store: Store<any>) {
-    this.environment = store.select('environment');
-  }
-  show() {
-    this.store.dispatch(showBlock());
-  }
-  hide() {
-    this.store.dispatch(hideBlock());
-  }
 
+  constructor(store: Store<any>) {
+    this.environment = store.select('environment');
+
+    Observable.merge(
+      this.show$.mapTo(showBlock()),
+      this.hide$.mapTo(hideBlock())
+    )
+    .subscribe((action)=>{
+      store.dispatch(action)
+    })
+  }
 }

@@ -1,6 +1,6 @@
 <p>
-  <button (click)="show()" class="button">Show</button>
-  <button (click)="hide()" class="button">Hide</button>
+  <button (click)="$show.next()" class="button">Show</button>
+  <button (click)="$hide.next()" class="button">Hide</button>
 </p>
 
 <p> environment: {{environment | async | json}} </p>
