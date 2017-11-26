@@ -1,5 +1,5 @@
 {
-  "name": "angular2-cli-razroo",
+  "name": "angular5-cli-razroo",
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
@@ -46,5 +46,16 @@
     "ts-node": "1.2.1",
     "tslint": "^4.0.2",
     "typescript": "~2.0.3"
-  }
+  },
+  "description": "This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CharlieGreenman/angular5-cli-razroo.git"
+  },
+  "author": "Charlie Greenman",
+  "bugs": {
+    "url": "https://github.com/CharlieGreenman/angular5-cli-razroo/issues"
+  },
+  "homepage": "https://github.com/CharlieGreenman/angular5-cli-razroo#readme"
 }
