@@ -19,8 +19,8 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserModule,
     FormsModule,
     HttpModule,
-    StoreModule.provideStore({environment}),
-    StoreDevtoolsModule.instrumentOnlyWithExtension({
+    StoreModule.forRoot({environment}),
+    StoreDevtoolsModule.instrument({
       maxAge: 5
     })
   ],
