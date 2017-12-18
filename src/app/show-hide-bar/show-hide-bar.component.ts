@@ -3,7 +3,8 @@ import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/observable/merge';
 import 'rxjs/add/operator/mapTo';
 import { Subject } from 'rxjs/Subject';
-import { Store } from '@ngrx/store';
+import { Store, Action } from '@ngrx/store';
+
 import { showBlock, hideBlock} from '../actions/show-hide';
 
 @Component({
@@ -23,8 +24,8 @@ export class ShowHideBarComponent{
       this.show$.mapTo(showBlock()),
       this.hide$.mapTo(hideBlock())
     )
-    .subscribe((action)=>{
-      store.dispatch(action)
-    })
+    .subscribe((action: Action) => {
+      store.dispatch(action);
+    });
   }
 }

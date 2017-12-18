@@ -1,10 +1,12 @@
 import * as types from "../constants/ActionTypes";
 
+import { Action } from '@ngrx/store';
+
 const initialState = {
   show: false
 };
 
-export const environment = (state = initialState, action) => {
+export const environment = (state = initialState, action: Action) => {
   switch(action.type) {
     case types.HIDE:
       return Object.assign({}, state, {
