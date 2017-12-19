@@ -1,3 +1,3 @@
-interface showHide {
+export interface IShowHide {
   show: boolean;
 }
