@@ -5,7 +5,7 @@ import 'rxjs/add/operator/mapTo';
 import { Subject } from 'rxjs/Subject';
 import { Store, Action } from '@ngrx/store';
 
-import { showBlock, hideBlock} from '../actions/show-hide';
+import { toggleBlock } from '../actions/show-hide';
 
 @Component({
   selector: 'app-show-hide-bar',
@@ -13,6 +13,7 @@ import { showBlock, hideBlock} from '../actions/show-hide';
   styleUrls: ['./show-hide-bar.component.scss']
 })
 export class ShowHideBarComponent{
+  show = false;
   show$ = new Subject();
   hide$ = new Subject();
   environment;
@@ -21,8 +22,8 @@ export class ShowHideBarComponent{
     this.environment = store.select('environment');
 
     Observable.merge(
-      this.show$.mapTo(showBlock()),
-      this.hide$.mapTo(hideBlock())
+      this.show$.mapTo(new toggleBlock({show: !this.show})),
+      this.hide$.mapTo(new toggleBlock({show: !this.show}))
     )
     .subscribe((action: Action) => {
       store.dispatch(action);

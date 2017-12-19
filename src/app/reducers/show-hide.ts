@@ -1,12 +1,16 @@
 import * as types from "../constants/ActionTypes";
 
-import { Action } from '@ngrx/store';
+import {ActionReducer, Action} from "@ngrx/store";
 
-const initialState = {
+export interface IInitialState = {
+  show: boolean
+};
+
+const initialState: IInitialState = {
   show: false
 };
 
-export const environment = (state = initialState, action: Action) => {
+export const environment: ActionReducer<IInitialState> = (state = initialState, action: Action) => {
   switch(action.type) {
     case types.HIDE:
       return Object.assign({}, state, {
