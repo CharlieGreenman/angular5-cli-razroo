@@ -1,0 +1,3 @@
+interface showHide {
+  show: boolean;
+}
