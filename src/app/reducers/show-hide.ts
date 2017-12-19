@@ -6,7 +6,7 @@ import { BlockActions } from "../actions/show-hide";
 
 export interface IInitialState {
   show: boolean;
-};
+}
 
 const initialState: IInitialState = {
   show: false
@@ -16,7 +16,7 @@ export const environment: ActionReducer<IInitialState> = (state = initialState, 
   switch(action.type) {
     case types.TOGGLE:
       return Object.assign({}, state, {
-        show: action.show
+        show: action.payload.show
       });
     default:
       return state;
