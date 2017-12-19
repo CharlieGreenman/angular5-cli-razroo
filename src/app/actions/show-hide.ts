@@ -8,16 +8,6 @@ export class toggleBlock implements Action {
   constructor(public payload: IShowHide) {};
 }
 
-export function showBlock() {
-    return {
-        type: types.SHOW,
-        show: true
-    };
-}
+export type BlockActions
+  = toggleBlock;
 
-export function hideBlock() {
-    return {
-        type: types.HIDE,
-        show: false
-    };
-}

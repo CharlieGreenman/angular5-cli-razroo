@@ -5,7 +5,7 @@ import 'rxjs/add/operator/mapTo';
 import { Subject } from 'rxjs/Subject';
 import { Store, Action } from '@ngrx/store';
 
-import { toggleBlock } from '../actions/show-hide';
+import { toggleBlock } from '../../actions/show-hide';
 
 @Component({
   selector: 'app-show-hide-bar',

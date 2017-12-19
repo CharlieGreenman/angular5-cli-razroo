@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
 import { environment } from './reducers/show-hide';
-import { ShowHideBarComponent } from './show-hide-bar/show-hide-bar.component';
+import { ShowHideBarComponent } from './components/show-hide-bar/show-hide-bar.component';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
