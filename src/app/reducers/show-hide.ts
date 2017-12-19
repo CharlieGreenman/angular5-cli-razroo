@@ -16,7 +16,7 @@ export const environment: ActionReducer<IInitialState> = (state = initialState, 
   switch(action.type) {
     case types.TOGGLE:
       return Object.assign({}, state, {
-        show: action.payload.show
+        show: !state.show
       });
     default:
       return state;

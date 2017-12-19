@@ -13,17 +13,14 @@ import { toggleBlock } from '../../actions/show-hide';
   styleUrls: ['./show-hide-bar.component.scss']
 })
 export class ShowHideBarComponent{
-  show = false;
-  show$ = new Subject();
-  hide$ = new Subject();
+  toggle$ = new Subject();
   environment;
 
   constructor(store: Store<any>) {
     this.environment = store.select('environment');
 
     Observable.merge(
-      this.show$.mapTo(new toggleBlock({show: !this.show})),
-      this.hide$.mapTo(new toggleBlock({show: !this.show}))
+      this.toggle$.mapTo(new toggleBlock()),
     )
     .subscribe((action: Action) => {
       store.dispatch(action);
