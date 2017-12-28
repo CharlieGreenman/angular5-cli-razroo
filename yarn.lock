@@ -185,6 +185,12 @@
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
+"@nrwl/nx@^0.6.0":
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/@nrwl/nx/-/nx-0.6.0.tgz#34e09859684b0d2a1ee2de2bc163c470b570c66f"
+  dependencies:
+    jasmine-marbles "0.1.0"
+
 "@nrwl/schematics@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@nrwl/schematics/-/schematics-0.6.0.tgz#7e178fcf4b273cc2c884d987190058ba17ad6a77"
@@ -3299,6 +3305,12 @@ jasmine-core@~2.4.0:
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.4.1.tgz#6f83ab3a0f16951722ce07d206c773d57cc838be"
 
+jasmine-marbles@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/jasmine-marbles/-/jasmine-marbles-0.1.0.tgz#c9ecdc64e20b6cf55b49a10201a5be33907dadcc"
+  dependencies:
+    lodash.isequal "^4.5.0"
+
 jasmine-spec-reporter@2.5.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/jasmine-spec-reporter/-/jasmine-spec-reporter-2.5.0.tgz#12e4782e6445c0dfabb8def4c52edd30f6362d42"
@@ -3680,6 +3692,10 @@ lodash.isarguments@^3.0.0:
 lodash.isarray@^3.0.0:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/lodash.isarray/-/lodash.isarray-3.0.4.tgz#79e4eb88c36a8122af86f844aa9bcd851b5fbb55"
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
 
 lodash.keys@^3.0.0:
   version "3.1.2"
