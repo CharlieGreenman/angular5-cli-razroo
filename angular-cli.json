@@ -50,6 +50,9 @@
       "style": false,
       "template": false
     },
+    "schematics": {
+      "collection": "@nrwl/schematics"
+    },
     "spec": {
       "class": false,
       "component": true,
