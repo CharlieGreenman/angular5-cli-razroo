@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
 import { environment } from './reducers/show-hide';
-import { ShowHideBarModule } from './components/show-hide-bar/show-hide-bar.module';
+import { ShowHideBarComponent } from './components/show-hide-bar/show-hide-bar.component';
+import { ShowHideBarRoutingModule } from './components/show-hide-bar/show-hide-bar-routing.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
@@ -18,7 +19,6 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     BrowserModule,
     FormsModule,
     HttpModule,
-    ShowHideBarModule,
     StoreModule.forRoot({environment}),
     StoreDevtoolsModule.instrument({
       maxAge: 5

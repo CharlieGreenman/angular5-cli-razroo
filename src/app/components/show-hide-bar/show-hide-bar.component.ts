@@ -14,7 +14,7 @@ import { toggleBlock } from '../../actions/show-hide';
 })
 export class ShowHideBarComponent{
   toggle$ = new Subject();
-  environment;
+  environment:any;
 
   constructor(store: Store<any>) {
     this.environment = store.select('environment');
