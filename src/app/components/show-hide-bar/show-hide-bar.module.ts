@@ -3,11 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { ShowHideBarRoutingModule } from './show-hide-bar-routing.module';
 
+import { ShowHideBarComponent } from './show-hide-bar.component';
+
 @NgModule({
   imports: [
     CommonModule,
     ShowHideBarRoutingModule
   ],
-  declarations: []
+  declarations: [
+    ShowHideBarComponent
+  ],
+  exports: [
+    ShowHideBarComponent
+  ]
+
 })
 export class ShowHideBarModule { }
