@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ShowHideBarComponent } from './components/show-hide-bar/show-hide-bar.component';
+import { ShowHideBarComponent } from '../show-hide-bar/show-hide-bar.component';
 import { ShowHideCircleComponent } from '../show-hide-circle/show-hide-circle.component';
 
 const routes: Routes = [

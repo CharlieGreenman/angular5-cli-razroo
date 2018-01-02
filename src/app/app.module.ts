@@ -9,21 +9,19 @@ import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
 import { environment } from './reducers/show-hide';
-import { ShowHideBarModule } from './components/show-hide-bar/show-hide-bar.component';
-import { ShowHideBarRoutingModule } from './components/show-hide-bar/show-hide-bar-routing.module';
+import { ShowHideModule } from './components/show-hide/show-hide.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { ShowHideCircleComponent } from './components/show-hide-circle/show-hide-circle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowHideCircleComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
+    ShowHideModule,
     StoreModule.forRoot({environment}),
     StoreDevtoolsModule.instrument({
       maxAge: 5
