@@ -18,7 +18,7 @@ import { ShowHideCircleComponent } from '../show-hide-circle/show-hide-circle.co
     ShowHideComponent,
     ShowHideBarComponent,
     ShowHideCircleComponent
-  ]
+  ],
   exports: [
     ShowHideComponent
   ]

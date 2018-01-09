@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
 import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
@@ -22,10 +23,11 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     HttpModule,
     AppRoutingModule,
     ShowHideModule,
-    StoreModule.forRoot({environment}),
+    StoreModule.forRoot({environment, routerReducer: routerReducer}),
     StoreDevtoolsModule.instrument({
       maxAge: 5
-    })
+    }),
+    StoreRouterConnectingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
