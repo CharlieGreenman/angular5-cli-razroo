@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ShowHideRoutingModule } from './show-hide-routing.module';
-import { ShowHideComponent } from './show-hide.component';
 
 import { ShowHideComponent } from './show-hide.component';
 import { ShowHideBarComponent } from '../show-hide-bar/show-hide-bar.component';
